@@ -24,6 +24,5 @@ jobs:
 
       - name: Step5 - List the files present in target folder
         run: |
-     
-         ls -a
+          pwd
 
