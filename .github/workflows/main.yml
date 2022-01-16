@@ -23,6 +23,6 @@ jobs:
          run: ls
 
       - name: Step5 - List the files present in target folder
-        run: |
-          pwd
+        run: pwd
+          
 
