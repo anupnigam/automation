@@ -30,6 +30,7 @@ jobs:
          mkdir nigaman
          ls
          cp /* nigaman
+         cd nigaman
          ls
           
 
