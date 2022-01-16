@@ -19,10 +19,15 @@ jobs:
       - name: Step1- Checkout master branch from GitHub  
         uses: actions/checkout@v2
         
-      -  name: Step4- List the current directory
+      -  name: Step2- List the current directory
          run: ls
 
-      - name: Step5 - List the files present in target folder
+      - name: Step3 - List the files present in target folder
         run: pwd
+        
+      - name: Step4 - copy all the files in another folder
+        run: |
+         mkdir nigaman
+         ls
           
 
