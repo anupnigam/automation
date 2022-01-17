@@ -27,9 +27,9 @@ jobs:
         
       - name: Step4 - copy all the files in another folder
         run: |
-         mkdir package
-         copy-item -path .\\src -destination .\\package\\ -recurse
-         cd package
+         $targetFolder = "package"
+         copy-item -path .\\src -destination .\\$targetFolder\\ -recurse
+         cd $targetFolder
          ls
          pwd
          cd src
