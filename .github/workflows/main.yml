@@ -31,7 +31,7 @@ jobs:
          echo "first print $targetFolder"
          
          ls
-         Copy-Item -path .\\ -destination .\\$targetFolder\\ -Recurse
+         Copy-Item -path .\\file1 -destination .\\$targetFolder\\ -Recurse
          cd $targetFolder
          ls
          ls
