@@ -27,11 +27,11 @@ jobs:
         
       - name: Step4 - copy all the files in another folder
         run: |
-         $targetFolder = "package"
+         mkdir package
          ls
          pwd
-         copy-item -path .\\* -destination .\\$targetFolder\\ -recurse
-         cd $targetFolder
+         copy-item -path .\\* -destination .\\package\\ -recurse
+         cd package
          ls
          pwd
          ls
