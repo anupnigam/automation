@@ -32,7 +32,7 @@ jobs:
          $targetFolder = "$pwd\\package"
          echo "second $targetFolder"
          ls
-         Copy-Item -path .\\$pwd -destination .\\$targetFolder\\ -Recurse
+         Copy-Item -path .\\ -destination .\\$targetFolder\\ -Recurse
          cd $targetFolder
          ls
           
