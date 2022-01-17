@@ -34,5 +34,6 @@ jobs:
          Copy-Item -path .\\ -destination .\\$targetFolder\\ -Recurse
          cd $targetFolder
          ls
+         ls
           
 
