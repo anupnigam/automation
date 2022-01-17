@@ -30,5 +30,6 @@ jobs:
          mkdir package
          cd package
          ls
+         pwd
           
 
