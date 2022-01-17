@@ -29,8 +29,7 @@ jobs:
         run: |
          $targetFolder= "package"
          echo "first print $targetFolder"
-         $targetFolder = "$pwd\\package"
-         echo "second $targetFolder"
+         
          ls
          Copy-Item -path .\\ -destination .\\$targetFolder\\ -Recurse
          cd $targetFolder
