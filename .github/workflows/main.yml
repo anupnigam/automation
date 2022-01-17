@@ -27,10 +27,10 @@ jobs:
         
       - name: Step4 - copy all the files in another folder
         run: |
-         mkdir nigaman
-         ls
-         cp /* nigaman
-         cd nigaman
+         $targetFolder= "package"
+         echo "first print $targetFolder"
+         $targetFolder = "$pwd\\package"
+         echo "second $targetFolder"
          ls
           
 
