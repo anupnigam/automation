@@ -32,5 +32,7 @@ jobs:
          cd package
          ls
          pwd
+         cd src
+         ls
           
 
