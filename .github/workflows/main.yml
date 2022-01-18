@@ -21,13 +21,14 @@ jobs:
         env:
           USER_ID: ${{secrets.USERNAME}}
           PWD: ${{secrets.PASSWD}}
+          run:
+            echo $USER_ID
          
         
       -  name: Step2- List the current directory
          run: ls
-             echo $USER_ID
-             echo $PWD
-
+             
+             
       - name: Step3 - List the files present in target folder
         run: |
           pwd
