@@ -34,5 +34,5 @@ jobs:
          cd package
          ls
          pwd
-         ls
+         
 
