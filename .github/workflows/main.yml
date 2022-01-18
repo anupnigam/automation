@@ -48,6 +48,7 @@ jobs:
           echo "sharedlocation is $sharedLocation"
           NET USE ${sharedLocation} /u:${userID} {passwd}
           robocopy "${targetFolder}" "{sharedLocation}" /E /IS /IT
+          ls
           
       
       
