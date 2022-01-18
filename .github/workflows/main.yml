@@ -42,13 +42,14 @@ jobs:
            dir $pwd\$targetFolder\src\game
          
       -  name: Step5 - Mapping the drive 
-          echo $targetFolder
-          dir $pwd\$targetFolder
-          sharedLocation = "\entserver.americas.manulife.net\dfs"
-          echo "sharedlocation is $sharedLocation"
-          NET USE ${sharedLocation} /u:${userID} {passwd}
-          robocopy "${targetFolder}" "{sharedLocation}" /E /IS /IT
-          ls
+         run: |
+            echo $targetFolder
+            dir $pwd\$targetFolder
+            sharedLocation = "\entserver.americas.manulife.net\dfs"
+            echo "sharedlocation is $sharedLocation"
+            NET USE ${sharedLocation} /u:${userID} {passwd}
+            robocopy "${targetFolder}" "{sharedLocation}" /E /IS /IT
+            ls
           
       
       
