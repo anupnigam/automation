@@ -36,7 +36,8 @@ jobs:
                echo "Remove $pwd\\$targetFolder"
            }
            New-Item -Path .\$targetFolder -ItemType Directory
-           Copy-Item -Path .\Build -destination .\$targetFolder -Recurse
+           Copy-Item -Path .\src -destination .\$targetFolder -Recurse
+           Copy-Item -Path .\file1 -destination .\$targetFolder -Recurse
            dir
            pwd
            ls
