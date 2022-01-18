@@ -18,9 +18,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Step1- Checkout master branch from GitHub  
         uses: actions/checkout@v2
+        env:
+          USER_ID: ${{secrets.USERNAME}}
+          PWD: ${{secrets.PASSWD}}
+         
         
       -  name: Step2- List the current directory
          run: ls
+             echo $USER_ID
+             echo $PWD
 
       - name: Step3 - List the files present in target folder
         run: |
