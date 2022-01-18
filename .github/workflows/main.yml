@@ -39,5 +39,5 @@ jobs:
            Copy-Item -Path .\src -destination .\$targetFolder -Recurse
            Copy-Item -Path .\file1 -destination .\$targetFolder -Recurse
            dir $pwd\$targetFolder
-           dir $pwd\$targetFolder\src
+           dir $pwd\$targetFolder\src\game
 
