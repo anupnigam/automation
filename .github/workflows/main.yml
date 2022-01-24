@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ main ]
   push:
-    branches: [main]
+    branches: [feature1]
 
 jobs:
   build:
@@ -54,7 +54,7 @@ jobs:
             dir $pwd\$targetFolder
             $sharedLocation = "\entserver.americas.manulife.net\dfs"
             echo "sharedlocation is $sharedLocation"
-            NET USE ${sharedLocation} /u:${USER_ID} ${PWD}
+            NET USE ${sharedLocation} /u:${{secrets.USERNAME}} ${{secrets.PASSWD}}
             robocopy "${targetFolder}" "{sharedLocation}" /E /IS /IT
             ls
           
