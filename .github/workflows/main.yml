@@ -55,6 +55,7 @@ jobs:
             $sharedLocation = "\\DESKTOP-TSATHI7"
             $sourceFolder = "E:\eti"
             echo "sharedlocation is $sharedLocation"
+            NET USE ${sourceFolder}
             NET USE ${sharedLocation}
             robocopy "${sourceFolder}" "${sharedLocation}" /E /IS /IT
             ls
