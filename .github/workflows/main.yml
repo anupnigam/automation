@@ -22,7 +22,7 @@ jobs:
           USER_ID: ${{secrets.USERNAME}}
           PWD: ${{secrets.PASSWD}}
           run: 
-                echo %USER_ID%
+                echo USER_ID
          
         
       -  name: Step2- List the current directory
