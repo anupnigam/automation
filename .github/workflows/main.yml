@@ -52,7 +52,7 @@ jobs:
          run: |
             echo $targetFolder
             dir $pwd\$targetFolder
-            $sharedLocation = "\\DESKTOP-TSATHI7"
+            $sharedLocation = "F:\ayush"
             $sourceFolder = "E:\eti"
             echo "sharedlocation is $sharedLocation"
             NET USE ${sourceFolder}
