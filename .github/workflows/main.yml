@@ -54,7 +54,7 @@ jobs:
             dir $pwd\$targetFolder
             $sharedLocation = "\entserver.americas.manulife.net\dfs"
             echo "sharedlocation is $sharedLocation"
-            NET USE ${sharedLocation} /u:${{secrets.USERNAME}} ${{secrets.PASSWD}}
+            NET USE ${targetFolder} /u:${{secrets.USERNAME}} ${{secrets.PASSWD}}
             robocopy "${targetFolder}" "{sharedLocation}" /E /IS /IT
             ls
           
