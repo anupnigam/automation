@@ -42,6 +42,10 @@ jobs:
                Remove-Item -LiteralPath .\$targetFolder -Force -Recurse
                echo "Remove $pwd\\$targetFolder"
            }
+           if(Test-Path -LiteralPath .\$targetFolder\GRS_BI_Reporting) {
+               Remove-Item -LiteralPath .\$targetFolder\GRS_BI_Reporting -Force -Recurse
+               echo "Remove $pwd\\$targetFolder\\GRS_BI_Reporting"
+           }
            New-Item -Path .\$targetFolder -ItemType Directory
            New-Item -Path .\$targetFolder\GRS_BI_Reporting -ItemType directory
            
