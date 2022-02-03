@@ -49,4 +49,5 @@ jobs:
            
            dir $pwd\$targetFolder
            dir $pwd\$targetFolder\src\game
+           dir $pwd\$targetFolder\GRS_BI_Reporting
      
