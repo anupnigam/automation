@@ -45,10 +45,11 @@ jobs:
            New-Item -Path .\$targetFolder -ItemType Directory
            Copy-Item -Path .\src -destination .\$targetFolder -Recurse
            Copy-Item -Path .\file1 -destination .\$targetFolder -Recurse
-           Copy-Item -Path .\GRS_BI_Reporting\*.dtsx* -destination .\$targetFolder\GRS_BI_Reporting -Recurse
+           Copy-Item -Path .\GRS_BI_Reporting\*.dtsx* -destination .\$targetFolder\GRS_BI_Reporting\ -Recurse
            
            dir $pwd\$targetFolder
            dir $pwd\$targetFolder\src\game
+            dir $pwd\$targetFolder\GRS_BI_Reporting
            dir $pwd\$targetFolder\GRS_BI_Reporting\
            dir $pwd
      
