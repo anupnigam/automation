@@ -47,7 +47,7 @@ jobs:
                echo "Remove $pwd\\$targetFolder\\GRS_BI_Reporting"
            }
            
-           dir $pwd\$targetFolder
+           
            New-Item -Path .\$targetFolder -ItemType Directory
            New-Item -Path .\$targetFolder\GRS_BI_Reporting -ItemType directory
            
