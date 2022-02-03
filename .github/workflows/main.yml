@@ -46,16 +46,20 @@ jobs:
                Remove-Item -LiteralPath .\$targetFolder\GRS_BI_Reporting -Force -Recurse
                echo "Remove $pwd\\$targetFolder\\GRS_BI_Reporting"
            }
+           
+           dir $pwd\$targetFolder
            New-Item -Path .\$targetFolder -ItemType Directory
            New-Item -Path .\$targetFolder\GRS_BI_Reporting -ItemType directory
            
            Copy-Item -Path .\src -destination .\$targetFolder -Recurse
+           dir $pwd\$targetFolder
+           echo "src"
            Copy-Item -Path .\file1 -destination .\$targetFolder -Recurse
+           dir $pwd\$targetFolder
+           echo "file1"
            Copy-Item -Path .\GRS_BI_Reporting\*.dtsx* -destination .\$targetFolder\GRS_BI_Reporting -Recurse
            
            dir $pwd\$targetFolder
            dir $pwd\$targetFolder\src\game
-            dir $pwd\$targetFolder\GRS_BI_Reporting
-           dir $pwd\$targetFolder\GRS_BI_Reporting\
-           dir $pwd
-     
+           dir $pwd\$targetFolder\GRS_BI_Reporting
+           
