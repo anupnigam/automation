@@ -43,9 +43,11 @@ jobs:
                echo "Remove $pwd\\$targetFolder"
            }
            New-Item -Path .\$targetFolder -ItemType Directory
+           New-Item -Path .\$targetFolder\GRS_BI_Reporting -ItemType directory
+           
            Copy-Item -Path .\src -destination .\$targetFolder -Recurse
            Copy-Item -Path .\file1 -destination .\$targetFolder -Recurse
-           Copy-Item -Path .\GRS_BI_Reporting\*.dtsx* -destination .\$targetFolder\GRS_BI_Reporting\ -Recurse -Force
+           Copy-Item -Path .\GRS_BI_Reporting\*.dtsx* -destination .\$targetFolder\GRS_BI_Reporting -Recurse -Force
            
            dir $pwd\$targetFolder
            dir $pwd\$targetFolder\src\game
