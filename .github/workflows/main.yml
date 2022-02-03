@@ -47,8 +47,18 @@ jobs:
            Copy-Item -Path .\file1 -destination .\$targetFolder -Recurse
            dir $pwd\$targetFolder
            dir $pwd\$targetFolder\src\game
+           
+      - name: Step5 - Mapping the drive 
+        run: |
+            echo $targetFolder
+            dir $pwd\$targetFolder
+            $sharedLocation = "\entserver.americas.manulife.net\dfs"
+            echo "sharedlocation is $sharedLocation"
+            NET USE ${targetFolder} /u:${{secrets.USERNAME}} ${{secrets.PASSWD}}
+            robocopy "${targetFolder}" "{sharedLocation}" /E /IS /IT
+            ls
          
-      -  name: Step5 - Mapping the drive 
+      -  name: Step6 - Mapping the drive 
          run: |
             echo $targetFolder
             dir $pwd\$targetFolder
