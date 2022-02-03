@@ -47,7 +47,7 @@ jobs:
            
            Copy-Item -Path .\src -destination .\$targetFolder -Recurse
            Copy-Item -Path .\file1 -destination .\$targetFolder -Recurse
-           Copy-Item -Path .\GRS_BI_Reporting\*.dtsx* -destination .\$targetFolder\GRS_BI_Reporting -Recurse -Force
+           Copy-Item -Path .\GRS_BI_Reporting\*.dtsx* -destination .\$targetFolder\GRS_BI_Reporting -Recurse
            
            dir $pwd\$targetFolder
            dir $pwd\$targetFolder\src\game
