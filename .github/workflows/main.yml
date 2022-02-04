@@ -38,18 +38,18 @@ jobs:
         run: |
            $targetFolder ="package"
            echo "Package -$targetFolder"
-           if(Test-Path -LiteralPath .\$targetFolder) {
+           if(Test-Path -LiteralPath .\$targetFolder) -or (Test-Path -LiteralPath .\$targetFolder\GRS_BI_Reporting) -or (Test-Path -LiteralPath .\$targetFolder\GRS_BI_Reporting\Inputs\Call_Center_Reason) {
+             
+             {
                Remove-Item -LiteralPath .\$targetFolder -Force -Recurse
+               Remove-Item -LiteralPath .\$targetFolder\GRS_BI_Reporting -Force -Recurse
+               Remove-Item -LiteralPath .\$targetFolder\GRS_BI_Reporting\Inputs\Call_Center_Reason -Force -Recurse
                echo "Remove $pwd\\$targetFolder"
            }
-           if(Test-Path -LiteralPath .\$targetFolder\GRS_BI_Reporting) {
-               Remove-Item -LiteralPath .\$targetFolder\GRS_BI_Reporting -Force -Recurse
-               echo "Remove $pwd\\$targetFolder\\GRS_BI_Reporting"
-           }
-           
-           
+          
            New-Item -Path .\$targetFolder -ItemType Directory
            New-Item -Path .\$targetFolder\GRS_BI_Reporting -ItemType directory
+           New-Item -Path .\$targetFolder\GRS_BI_Reporting\Inputs\Call_Center_Reason -ItemType directory
            
            Copy-Item -Path .\src -destination .\$targetFolder -Recurse
            dir $pwd\$targetFolder
