@@ -33,33 +33,9 @@ jobs:
         run: |
           pwd
           ls
-        
-      - name: Step4 - copy all the files in another folder
-        run: |
-           $targetFolder ="package"
-           echo "Package -$targetFolder"
-           if(Test-Path -LiteralPath .\$targetFolder) -or (Test-Path -LiteralPath .\$targetFolder\GRS_BI_Reporting) -or (Test-Path -LiteralPath .\$targetFolder\GRS_BI_Reporting\Inputs\Call_Center_Reason) {
-             
-             {
-               Remove-Item -LiteralPath .\$targetFolder -Force -Recurse
-               Remove-Item -LiteralPath .\$targetFolder\GRS_BI_Reporting -Force -Recurse
-               Remove-Item -LiteralPath .\$targetFolder\GRS_BI_Reporting\Inputs\Call_Center_Reason -Force -Recurse
-               echo "Remove $pwd\\$targetFolder"
-           }
           
-           New-Item -Path .\$targetFolder -ItemType Directory
-           New-Item -Path .\$targetFolder\GRS_BI_Reporting -ItemType directory
-           New-Item -Path .\$targetFolder\GRS_BI_Reporting\Inputs\Call_Center_Reason -ItemType directory
-           
-           Copy-Item -Path .\src -destination .\$targetFolder -Recurse
-           dir $pwd\$targetFolder
-           echo "src"
-           Copy-Item -Path .\file1 -destination .\$targetFolder -Recurse
-           dir $pwd\$targetFolder
-           echo "file1"
-           Copy-Item -Path .\GRS_BI_Reporting\*.dtsx* -destination .\$targetFolder\GRS_BI_Reporting -Recurse
-           
-           dir $pwd\$targetFolder
-           dir $pwd\$targetFolder\src\game
-           dir $pwd\$targetFolder\GRS_BI_Reporting
-           
+      - name: Step4.1 - list the contents
+        run: |
+            Get-ChildItem .\listfile
+        
+     
