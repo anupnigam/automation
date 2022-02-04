@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ main ]
   push:
-    branches: [feature1]
+    branches: [feature2]
 
 jobs:
   build:
@@ -36,6 +36,6 @@ jobs:
           
       - name: Step4.1 - list the contents
         run: |
-            Get-ChildItem .\listfile
+            Get-Content -Path .\listfile 
         
      
