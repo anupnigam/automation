@@ -50,8 +50,8 @@ jobs:
                echo "before"
                
     
-               dir $pwd\$targetFolder\src
-               dir $pwd\$targetFolder\src\game
+               dir $pwd\$targetFolder\GRS_BI_Reporting
+               dir $pwd\$targetFolder\GRS_BI_Reporting\Inputs
                
                
             
