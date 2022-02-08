@@ -43,7 +43,7 @@ jobs:
             $values= Get-Content -Path .\listfile 
             foreach($val in $values)
               {
-              
+              echo "$val[0]"
               Copy-Item -Path $val[0] -destination .\$targetFolder -Recurse
               
               }
