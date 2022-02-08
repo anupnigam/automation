@@ -43,8 +43,8 @@ jobs:
             $values= Get-Content -Path .\listfile 
             foreach($val in $values)
               {
-              
-              Copy-Item -Path $val -destination .\$targetFolder\GRS_BI_Reporting\$val -Recurse
+              if $val 
+              Copy-Item -Path $val -destination .\$targetFolder -Recurse
               
               }
                echo "before"
