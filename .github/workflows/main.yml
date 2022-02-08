@@ -50,11 +50,10 @@ jobs:
                echo "before"
                
     
-               dir $pwd\$targetFolder
-               echo "copy"
-              dir $pwd\$targetFolder
-              echo "after"
-              
+               dir $pwd\$targetFolder\src
+               dir $pwd\$targetFolder\src\game
+               
+               
             
             
   
