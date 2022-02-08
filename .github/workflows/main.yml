@@ -45,8 +45,13 @@ jobs:
               {
               
               Copy-Item -Path .\$val[0] -destination .\$targetFolder -Recurse
+              
               }
                echo "before"
+               Copy-Item -Path .\src -destination .\$targetFolder -Recurse
+               echo "cut"
+               dir $pwd\$targetFolder
+               echo "copy"
               dir $pwd\$targetFolder
               echo "after"
               
