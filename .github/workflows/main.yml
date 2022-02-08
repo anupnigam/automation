@@ -46,6 +46,7 @@ jobs:
               echo "$val"
               Copy-Item -Path .\$val[1] -destination .\$targetFolder -Recurse
               }
+              dir $pwd
               dir $pwd\$targetFolder\src
               
             
