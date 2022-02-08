@@ -44,7 +44,7 @@ jobs:
             foreach($val in $values)
               {
               
-              Copy-Item -Path $val -destination .\$targetFolder -Recurse
+              Copy-Item -Path $val -destination .\$targetFolder\$val -Recurse
               
               }
                echo "before"
