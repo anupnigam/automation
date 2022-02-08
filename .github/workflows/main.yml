@@ -29,11 +29,25 @@ jobs:
 
       - name: Step4.1 - list the contents
         run: |
+           $targetFolder ="package"
+           echo "Package -$targetFolder"
+           if(Test-Path -LiteralPath .\$targetFolder) 
+             
+             {
+               Remove-Item -LiteralPath .\$targetFolder -Force -Recurse
+
+               echo "Remove $pwd\\$targetFolder"
+            }
+         
+            New-Item -Path .\$targetFolder -ItemType Directory
             $values= Get-Content -Path .\listfile 
             foreach($val in $values)
               {
               echo "$val"
+              Copy-Item -Path .\$val[1] -destination .\$targetFolder -Recurse
               }
+              dir $pwd\$targetFolder\src\game
+            
             
   
         
