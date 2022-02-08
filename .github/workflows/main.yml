@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ main ]
   push:
-    branches: [feature2]
+    branches: [feature3]
 
 jobs:
   build:
@@ -51,7 +51,7 @@ jobs:
                
     
                dir $pwd\$targetFolder
-               dir $pwd\$targetFolder\Inputs
+               dir $pwd\$targetFolder\GRS\GRS_BI_Reporting
                
                
             
