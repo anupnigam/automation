@@ -23,19 +23,18 @@ jobs:
           PWD: ${{secrets.PASSWD}}
           run: 
                 echo USER_ID
-         
-        
+
       -  name: Step2- List the current directory
          run: ls
-             
-             
-      - name: Step3 - List the files present in target folder
-        run: |
-          pwd
-          ls
-          
+
       - name: Step4.1 - list the contents
         run: |
-            Get-Content -Path .\listfile 
+            $values= Get-Content -Path .\listfile 
+            foreach($val in $values)
+              {
+              echo "$val"
+              }
+            
+  
         
      
