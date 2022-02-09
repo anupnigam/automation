@@ -53,6 +53,8 @@ jobs:
     
                dir $pwd\$targetFolder
                dir $pwd\$targetFolder\GRS_BI_Reporting
+               dir $pwd\$targetFolder\GRS_BI_Reporting\Inputs
+               
                
                
             
