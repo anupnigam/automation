@@ -40,11 +40,12 @@ jobs:
             }
          
             New-Item -Path .\$targetFolder -ItemType Directory
+            New-Item -Path .\$targetFolder\GRS_BI_Reporting -ItemType Directory
             $values= Get-Content -Path .\listfile 
             foreach($val in $values)
               {
               
-              Copy-Item -Path $val -destination .\$targetFolder -Recurse
+              Copy-Item -Path $val -destination .\$targetFolder\GRS_BI_Reporting -Recurse
               
               }
                echo "before"
