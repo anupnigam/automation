@@ -55,6 +55,10 @@ jobs:
                dir $pwd\$targetFolder\GRS_BI_Reporting
                dir $pwd\$targetFolder\GRS_BI_Reporting\Inputs
                
+      - name: Step5- List the current directory
+        run: |
+         prod_server = "\\entserver21.americas.manulife.net"
+         NET USE ${prod_server} /u:${env:USER_ID} ${env:PWD}
                
                
             
